@@ -1,7 +1,16 @@
+
 export const SeriesCard = ({ currentElement }) => {
   const { name, img_url, rating, description, cast, genre, watch_url } = currentElement;
   const ratingClass = rating >= 8.5 ? "super_hit" : "average"
-  
+  const ButtonThana = {
+    padding: "1.2rem 2.4rem",
+    border: "none",
+    fontSize: "1.6rem",
+    backgroundColor: `${rating >= 8.5 ? "#7dcea0" : "#f7dc6f"}`,
+    color: "var(--btn-color)",
+    fontWeight: "bold",
+    cursor: "pointer",
+    };
   return (
     <>
       <li className="card">
@@ -17,7 +26,7 @@ export const SeriesCard = ({ currentElement }) => {
           <p>Genre: {genre.join(", ")} </p>
           <p>Cast: {cast.join(", ")}</p>
           <a href={watch_url} target="_blank">
-            <button>Watch Now</button>
+            <button style={ButtonThana}>Watch Now</button>
           </a>
         </div>
       </li>
