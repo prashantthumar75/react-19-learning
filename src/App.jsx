@@ -1,7 +1,6 @@
 import './App.css';
-import { EventProps } from './components/EventProps';
+import { DedicatedState } from './components/DedicatedState';
 import './components/Netflix.css';
-import { TestingState } from './components/TestingState';
 function App() {
   return (
     <>
@@ -9,7 +8,7 @@ function App() {
         <h1 className="card-heading"> List of Best Nextflix series</h1>
         {/* <EventHandling></EventHandling> */}
         {/* <NetflixSeries />; */}
-        <TestingState></TestingState>
+        <DedicatedState></DedicatedState>
         {/* <EventProps></EventProps> */}
       </section>
     </>
