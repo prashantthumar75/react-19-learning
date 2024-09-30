@@ -10,9 +10,8 @@ export const DedicatedState = () => {
       { name: "Eve", age: 40 },
     ]);
 
-    const HandleCount = () => {
-        setCount(() => count + 1)
-    }
+    const countUser = users.length
+    const AverageUser = users.reduce((acc, user) => acc + user.age, 0) / users.length
     return (
       <>
         {users.map((user) => (
@@ -20,6 +19,8 @@ export const DedicatedState = () => {
             {user.name}: {user.age}
           </div>
         ))}
+        {countUser}--
+        {AverageUser}
       </>
     ); 
 }
